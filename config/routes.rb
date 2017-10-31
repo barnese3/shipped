@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+get '/' => 'home#index', as: :root
+
   resources :jobs
   resources :boats
   devise_for :users
