@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :views
   resources :jobs
   resources :boats
   devise_for :users
