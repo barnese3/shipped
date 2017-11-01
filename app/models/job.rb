@@ -1,8 +1,44 @@
 class Job < ApplicationRecord
 	belongs_to :boat
-	belongs_to :user
+	belongs_to :company
 
 	validates :cost, numericality: {greater_than_or_equal_to: 1000}
 	validates :name, uniqueness: true
 	validates :description, length: {minimum: 50}
+
+	ORIGIN = [ 
+	"Australia", 
+	"Spain", 
+	"New York", 
+	"Los Angeles",
+	"Montreal",
+	"Vancouver",
+	"Ireland",
+	"New Zealand",
+	"South Africa",
+	"France",
+	"Germany",
+	"Hong Kong",
+	"United Kingdom",
+	"China",
+	"Venice" ]
+
+	DESTINATIONS = [ 
+	"Australia", 
+	"Spain", 
+	"New York", 
+	"Los Angeles",
+	"Montreal",
+	"Vancouver",
+	"Ireland",
+	"New Zealand",
+	"South Africa",
+	"France",
+	"Germany",
+	"Hong Kong",
+	"United Kingdom",
+	"China",
+	"Venice" ]
+
 end
+

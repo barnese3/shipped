@@ -5,6 +5,7 @@ class CreateJobs < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :origin
       t.string :destination
+      t.string :status
       t.integer :cost
       t.integer :containers
       t.references :user, foreign_key: {to_table: :users}, index: true

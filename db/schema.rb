@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20171031170717) do
     t.string "description"
     t.string "origin"
     t.string "destination"
+    t.string "status"
     t.integer "cost"
     t.integer "containers"
     t.integer "user_id"

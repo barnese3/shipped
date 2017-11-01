@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :companies
   devise_for :users
   resources :users
-get '/' => 'home#index', as: :root
+  root 'home#index'
 
   resources :jobs
   resources :boats

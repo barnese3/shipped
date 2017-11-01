@@ -15,6 +15,7 @@ class BoatsController < ApplicationController
   # GET /boats/new
   def new
     @boat = Boat.new
+    @boat.user_id = current_user.id if user_signed_in?
   end
 
   # GET /boats/1/edit
@@ -69,6 +70,6 @@ class BoatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boat_params
-      params.require(:boat).permit(:name, :container_amount, :location)
+      params.require(:boat).permit(:user_id, :name, :container_amount, :location)
     end
 end

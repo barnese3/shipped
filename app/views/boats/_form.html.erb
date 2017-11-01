@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.hidden_field :user_id %>
+    <%= form.hidden_field :user_id, id: :user_id %>
+  </div>
+
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :boat_name %>
   </div>
@@ -23,7 +28,7 @@
 
   <div class="field">
     <%= form.label :location %>
-    <%= form.text_field :location, id: :boat_location %>
+    <%= form.select(:location, (Boat::LOCATIONS).each_with_index.map {|x,i| [x, i]}) %>
   </div>
 
   <div class="actions">
