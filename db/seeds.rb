@@ -12,11 +12,11 @@ User.create ([
 ])
 
 Boat.create ([
-	{},
-	{}
+	{name: "First Boat", container_amount: 10000, location: "China", user_id: 1},
+	{name: "Second Boat", container_amount: 15000, location: "New York", user_id: 2}
 ])
 
 Job.create ([
-	{},
-	{}
+	{name: "Toy Delivery", description: "Large toy delivery from China to Los Angeles estimating a total cost of $1,500 with 8,000 containers", origin: "China", destination: "Los Angeles", cost: 1500, containers: 8000, user_id: 1, boat_id: 1},
+	{name: "Clothes Delivery", description: "Delivering 14,000 containers of clothes from Italy to New York, cost is $2,000", origin: "Italy", destination: "New York", cost: 2000, containers: 14000, user_id: 2, boat_id: 2}
 ])
