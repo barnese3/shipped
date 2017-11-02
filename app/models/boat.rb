@@ -3,6 +3,8 @@ class Boat < ApplicationRecord
 	has_many :jobs, :through => :boat_jobs, :dependent => :destroy
 	belongs_to :company
 
+	mount_uploader :image, ImageUploader
+
 	validates :name, uniqueness: true
 
 	class Places

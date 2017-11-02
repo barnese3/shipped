@@ -30,6 +30,8 @@
   <%= @job.containers %>
 </p>
 
+<p><%= @job.created_at.to_date %></p>
+
 <%= link_to 'Edit Job', edit_job_path(@job) %> |
 <%= link_to 'Delete Job', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
 

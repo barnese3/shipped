@@ -7,4 +7,5 @@
 <% if company_signed_in? %>
 	<%= link_to "My Account", current_company %>
 	<%= link_to('Logout', destroy_company_session_path, method: :delete) %>
+<% end %>
 </div>

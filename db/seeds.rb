@@ -12,8 +12,8 @@ Company.create ([
 ])
 
 Boat.create ([
-	{name: "First Boat", container_amount: 10000, location: "China", company_id: 1},
-	{name: "Second Boat", container_amount: 15000, location: "New York", company_id: 2}
+	{name: "First Boat", container_amount: 10000, location: "China", image: open("https://www.jaguarfreight.com/wp-content/uploads/10536430_m.jpg"), company_id: 1},
+	{name: "Second Boat", container_amount: 15000, location: "New York", image: open("https://smallbusiness.fedex.com/content/dam/SMB/updates/images/wide/Updt_Aug15_Art7_657x370_wide-large.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"), company_id: 2}
 ])
 
 Job.create ([
