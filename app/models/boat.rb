@@ -1,6 +1,6 @@
 class Boat < ApplicationRecord
-	has_many :boat_jobs
-	has_many :jobs, :through => :boat_jobs
+	has_many :boat_jobs, :dependent => :destroy
+	has_many :jobs, :through => :boat_jobs, :dependent => :destroy
 	belongs_to :company
 
 	validates :name, uniqueness: true

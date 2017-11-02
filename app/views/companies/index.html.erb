@@ -5,11 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Username</th>
+      <th>Company Name</th>
       <th>Email</th>
       <th>Firstname</th>
       <th>Lastname</th>
-      <th>Password</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,19 +16,11 @@
   <tbody>
     <% @companies.each do |company| %>
       <tr>
-        <td><%= company.name %></td>
+        <td><%= link_to company.name, company %></td>
         <td><%= company.email %></td>
         <td><%= company.firstname %></td>
         <td><%= company.lastname %></td>
-        <td><%= company.password %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Company', new_company_path %>

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Company Name:</strong>
   <%= @company.name %>
 </p>
 
@@ -21,9 +21,17 @@
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @company.password %>
+  <strong>My Boats:</strong>
+  <%= @company.boats.name %>
 </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<p>
+  <strong>My Jobs:</strong>
+  <%= @company.jobs.name %>
+</p>
+
+<%= link_to 'New Boat', new_boat_path %>
+<%= link_to 'New Job', new_job_path %>
+
+<%= link_to 'Edit My Account', edit_company_path(@company) %>
+<%= link_to 'Delete My Account', @company, method: :delete, data: { confirm: 'Are you sure?' } %>

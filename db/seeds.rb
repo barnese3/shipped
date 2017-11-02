@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Company.create ([
-	{name: "veronica", firstname: "Elise", lastname: "Barnes", email: "elise@gmail.com", password: "password"},
-	{name: "elise", firstname: "Veronica", lastname: "Martinez", email: "veronica@gmail.com", password: "password"}
+	{name: "elise", firstname: "Elise", lastname: "Barnes", email: "elise@gmail.com", password: "password"},
+	{name: "veronica", firstname: "Veronica", lastname: "Martinez", email: "veronica@gmail.com", password: "password"}
 ])
 
 Boat.create ([
