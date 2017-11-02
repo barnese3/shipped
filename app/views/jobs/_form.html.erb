@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.hidden_field :user_id %>
-    <%= form.hidden_field :user_id, id: :user_id %>
+    <%= form.hidden_field :company_id %>
+    <%= form.hidden_field :company_id, id: :company_id %>
   </div>
 
   <div class="field">
@@ -21,11 +21,14 @@
     <%= form.text_field :name, id: :job_name %>
   </div>
 
-
-
   <div class="field">
     <%= form.label :description %>
     <%= form.text_field :description, id: :job_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boat_ids %>
+    <%= form.select( :boat_ids, options_for_select(Boat.pluck(:name,:id))) %>
   </div>
 
   <div class="field">
@@ -35,7 +38,7 @@
 
   <div class="field">
     <%= form.label :destination %>
-    <%= form.input :destination, as: :select, collection: Job::DESTINATIONS %>
+        <%= form.select(:destination, (Job::DESTINATIONS).each_with_index.map {|x,i| [x, i]}) %>
 
   </div>
 

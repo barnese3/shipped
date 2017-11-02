@@ -1,5 +1,6 @@
 class Job < ApplicationRecord
-	belongs_to :boat
+	has_many :boat_jobs
+	has_many :boats, :through => :boat_jobs
 	belongs_to :company
 
 	validates :cost, numericality: {greater_than_or_equal_to: 1000}
@@ -41,4 +42,3 @@ class Job < ApplicationRecord
 	"Venice" ]
 
 end
-

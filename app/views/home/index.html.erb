@@ -1,9 +1,9 @@
 <h1>Home Page</h1>
 
-<%= link_to "Sign Up", :new_user_registration %>
-<%= link_to "Log In", :new_user_session %>
+<%= link_to "Sign Up", :new_company_registration %>
+<%= link_to "Log In", :new_company_session %>
 
-<% if user_signed_in? %>
-	<%= link_to "My Account", current_user %>
-	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% if company_signed_in? %>
+	<%= link_to "My Account", current_company %>
+	<%= link_to('Logout', destroy_company_session_path, method: :delete) %>
 <% end %>

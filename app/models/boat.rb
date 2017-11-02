@@ -1,6 +1,7 @@
 class Boat < ApplicationRecord
-	has_many :jobs
-	has_many :companies, through: :jobs
+	has_many :boat_jobs
+	has_many :jobs, :through => :boat_jobs
+	belongs_to :company
 
 	validates :name, uniqueness: true
 
