@@ -4,7 +4,8 @@ class CreateBoats < ActiveRecord::Migration[5.1]
       t.string :name
       t.integer :container_amount
       t.string :location
-      t.references :user, foreign_key: {to_table: :users}, index: true
+      t.references :company, foreign_key: {to_table: :companies}, index: true
+   	
 
       t.timestamps
     end
