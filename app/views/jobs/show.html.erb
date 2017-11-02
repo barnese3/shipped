@@ -12,12 +12,12 @@
 
 <p>
   <strong>Origin:</strong>
-  <%= @job.origin %>
+  <%= Job::Places.get_location(@job.origin) %>
 </p>
 
 <p>
   <strong>Destination:</strong>
-  <%= @job.destination %>
+  <%= Job::Places.get_location(@job.destination) %>
 </p>
 
 <p>
@@ -30,5 +30,6 @@
   <%= @job.containers %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Edit Job', edit_job_path(@job) %> |
+<%= link_to 'Delete Job', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
+

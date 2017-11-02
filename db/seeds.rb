@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Company.create ([
-	{firstname: "Elise", lastname: "Barnes", email: "elise@gmail.com", password: "password"},
-	{firstname: "Veronica", lastname: "Martinez", email: "veronica@gmail.com", password: "password"}
+
+	{name: "elise", firstname: "Elise", lastname: "Barnes", email: "elise@gmail.com", password: "password"},
+	{name: "veronica", firstname: "Veronica", lastname: "Martinez", email: "veronica@gmail.com", password: "password"}
+
 ])
 
 Boat.create ([
@@ -17,6 +19,7 @@ Boat.create ([
 ])
 
 Job.create ([
+
 	{name: "Toy Delivery", description: "Large toy delivery from China to Los Angeles estimating a total cost of $1,500 with 8,000 containers", origin: "China", destination: "Los Angeles", cost: 1500, containers: 8000},
 	{name: "Clothes Delivery", description: "Delivering 14,000 containers of clothes from Italy to New York, cost is $2,000", origin: "Italy", destination: "New York", cost: 2000, containers: 14000}
 ])
@@ -25,4 +28,5 @@ Job.create ([
 BoatJob.create ([
 	{boat_id: 1, job_id: 1},
 	{boat_id: 2, job_id: 2}
-	])
+])
+

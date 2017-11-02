@@ -3,6 +3,7 @@
 <%= link_to "Sign Up", :new_company_registration %>
 <%= link_to "Log In", :new_company_session %>
 
+
 <% if company_signed_in? %>
 	<%= link_to "My Account", current_company %>
 	<%= link_to('Logout', destroy_company_session_path, method: :delete) %>

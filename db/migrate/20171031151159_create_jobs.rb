@@ -8,7 +8,9 @@ class CreateJobs < ActiveRecord::Migration[5.1]
       t.string :status
       t.integer :cost
       t.integer :containers
-     
+
+           t.references :company, foreign_key: {to_table: :companies}, index: true
+
 
       t.timestamps
     end

@@ -11,6 +11,14 @@
   <body>
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", :root %></li>
+        <li><%= link_to "Companies", :companies %></li>
+        <li><%= link_to "Boats", :boats %></li>
+        <li><%= link_to "Jobs", :jobs %></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

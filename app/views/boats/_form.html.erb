@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :location %>
-    <%= form.select(:location, (Boat::LOCATIONS).each_with_index.map {|x,i| [x, i]}) %>
+    <%= form.select(:location, (Boat::Places::places).each_with_index.map {|x,i| [x, i]}) %>
   </div>
 
   <div class="actions">

@@ -4,8 +4,23 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label :name, "Company Name" %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :firstname, "First Name" %><br />
+    <%= f.text_field :firstname %>
+  </div>
+
+    <div class="field">
+    <%= f.label :lastname, "Last Name" %><br />
+    <%= f.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Email Address" %><br />
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
@@ -25,5 +40,7 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+
+
 
 <%= render "companies/shared/links" %>
