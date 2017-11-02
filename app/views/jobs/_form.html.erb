@@ -28,18 +28,17 @@
 
   <div class="field">
     <%= form.label :boat_ids %>
-    <%= form.select( :boat_ids, options_for_select(Boat.pluck(:name,:id))) %>
+    <%= form.select( :boat_ids, options_for_select(@current_company.boats.pluck(:name,:id))) %>
   </div>
 
   <div class="field">
     <%= form.label :origin %>
-    <%= form.select(:origin, (Job::ORIGIN).each_with_index.map {|x,i| [x, i]}) %>
+    <%= form.select(:origin, (Job::Places::places).each_with_index.map {|x,i| [x, i]}) %>
   </div>
 
   <div class="field">
     <%= form.label :destination %>
-        <%= form.select(:destination, (Job::DESTINATIONS).each_with_index.map {|x,i| [x, i]}) %>
-
+    <%= form.select(:destination, (Job::Places::places).each_with_index.map {|x,i| [x, i]}) %>
   </div>
 
   <div class="field">
