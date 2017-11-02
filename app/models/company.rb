@@ -1,5 +1,10 @@
 class Company < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 	has_many :jobs
-	has_many :boats, through: :jobs
-	has_many :users
+	has_many :boats
+	
+	
 end
