@@ -1,37 +1,47 @@
 <p id="notice"><%= notice %></p>
+<div class="accountcontain">
+<div class="myaccount">
 
-<p>
-  <strong>Company Name:</strong>
-  <%= @company.name %>
+<div class="companyHeadContain">
+<p class="companyHead">
+  <strong>Company Name</strong>
+  <p><%= @company.name %></p>
+</p>
+</div>
+
+<p class="companyHead">
+  <strong>Email</strong>
+  <p><%= @company.email %></p>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @company.email %>
+<p class="companyHead">
+  <strong>Firstname</strong>
+  <p><%= @company.firstname %></p>
 </p>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @company.firstname %>
+<p class="companyHead">
+  <strong>Lastname</strong>
+  <p><%= @company.lastname %></p>
 </p>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @company.lastname %>
+<p class="companyHead">
+  <strong>My Boats</strong>
+  <% @company.boats.each do |boat| %>
+    <p><%= link_to boat.name, boat %></p>
+  <% end %>
 </p>
 
-<p>
-  <strong>My Boats:</strong>
-  <%= @company.boats.name %>
+<p class="companyHead">
+  <strong>My Jobs</strong>
+  <% @company.jobs.each do |job| %>
+    <p><%= link_to job.name, job %></p>
+  <% end %>
 </p>
+</div>
+</div>
 
-<p>
-  <strong>My Jobs:</strong>
-  <%= @company.jobs.name %>
-</p>
+<p><%= link_to 'New Boat', new_boat_path %></p>
+<p><%= link_to 'New Job', new_job_path %></p>
 
-<%= link_to 'New Boat', new_boat_path %>
-<%= link_to 'New Job', new_job_path %>
-
-<%= link_to 'Edit My Account', edit_company_path(@company) %>
-<%= link_to 'Delete My Account', @company, method: :delete, data: { confirm: 'Are you sure?' } %>
+<p><%= link_to 'Edit My Account', edit_company_path(@company) %></p>
+<p><%= link_to 'Delete My Account', @company, method: :delete, data: { confirm: 'Are you sure?' } %></p>
