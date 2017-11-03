@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+<div class="edit">
+<h1> Jobs</h1
+<center>
+
   <div class="field">
     <%= form.hidden_field :company_id %>
     <%= form.hidden_field :company_id, id: :company_id %>
@@ -28,7 +32,7 @@
 
   <div class="field">
     <%= form.label :boat_ids %>
-    <%= form.select( :boat_ids, options_for_select(@current_company.boats.pluck(:name,:id))) %>
+    <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) %>
   </div>
 
   <div class="field">
@@ -54,5 +58,13 @@
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+    
+    <br>
+    <%= link_to 'Back', jobs_path %>
+ </center></div>
+
 <% end %>
+
+
+
+

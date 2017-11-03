@@ -1,12 +1,23 @@
-<h1>Home Page</h1>
+<center><h1>WELCOME TO B&M SHIPPING  </h1></center>
+
 <div class="home">
+
+<% if !current_company %>
 <%= link_to "Sign Up", :new_company_registration %>
 <%= link_to "Log In", :new_company_session %>
-
+<% end %>
+<br>
+<br>
 
 <% if company_signed_in? %>
 	<%= link_to "My Account", current_company %>
 	<%= link_to('Logout', destroy_company_session_path, method: :delete) %>
+<br>
+<br>
 </div>
 
 <% end %>
+
+<center><%= image_tag "https://gateleyplc.com/wp-content/uploads/2015/11/gateley-shipping-services.jpg", width:"700px", height:"500" %></center>
+
+
