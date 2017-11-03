@@ -1,3 +1,66 @@
 // Place all the styles related to the companies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.accountcontain {
+	text-align: center;
+}
+
+.companyHead {
+	padding-top: 10px;
+	background-color: #00A8E8;
+	width: 400px;
+	height: 30px;
+	margin: 0;
+	border-radius: 12px;
+	text-align: center;
+	margin-left: 36.5%;
+
+	strong {
+		font-size: 20px;
+		color: white;
+	}
+
+	p {
+		font-size: 50px;
+	}
+}
+
+.myaccount {
+	text-align: center;
+}
+
+.companyHeadContain {
+	width: 100%;
+	text-align: center;
+}
+
+.editaccountform {
+	width: 100%;
+	text-align: center;
+
+	form input {
+		border-color: #00A8E8;
+		border-style: solid;
+		border-radius: 12px;
+		padding: 5px;
+		margin-bottom: 20px;
+	}
+
+	form label {
+		font-size: 16px;
+		padding-bottom: 5px;
+	}
+
+	form .actions input {
+		background-color: white;
+		padding-left: 10px;
+		padding-right: 10px;
+	} 
+}
+
+.editaccounthead {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 5%;
+}

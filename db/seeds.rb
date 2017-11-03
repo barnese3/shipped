@@ -7,19 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Company.create ([
-
 	{name: "elise", firstname: "Elise", lastname: "Barnes", email: "elise@gmail.com", password: "password"},
 	{name: "veronica", firstname: "Veronica", lastname: "Martinez", email: "veronica@gmail.com", password: "password"}
-
 ])
 
 Boat.create ([
-	{name: "First Boat", container_amount: 10000, location: "China", company_id: 1},
-	{name: "Second Boat", container_amount: 15000, location: "New York", company_id: 2}
+	{name: "First Boat", container_amount: 10000, location: "China", image: open("https://www.jaguarfreight.com/wp-content/uploads/10536430_m.jpg"), company_id: 1},
+	{name: "Second Boat", container_amount: 15000, location: "New York", image: open("https://smallbusiness.fedex.com/content/dam/SMB/updates/images/wide/Updt_Aug15_Art7_657x370_wide-large.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"), company_id: 2}
 ])
 
 Job.create ([
-
 	{name: "Toy Delivery", description: "Large toy delivery from China to Los Angeles estimating a total cost of $1,500 with 8,000 containers", origin: "China", destination: "Los Angeles", cost: 1500, containers: 8000, company_id: 1},
 	{name: "Clothes Delivery", description: "Delivering 14,000 containers of clothes from Italy to New York, cost is $2,000", origin: "Italy", destination: "New York", cost: 2000, containers: 14000, company_id: 2}
 ])
@@ -29,4 +26,3 @@ BoatJob.create ([
 	{boat_id: 1, job_id: 1},
 	{boat_id: 2, job_id: 2}
 ])
-

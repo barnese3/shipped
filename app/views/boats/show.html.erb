@@ -1,6 +1,10 @@
 <div class="boats"><p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag(@boat.image) if @boat.image? %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @boat.name %>
 </p>

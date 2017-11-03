@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-
   resources :boat_jobs
   devise_for :companies
   resources :companies

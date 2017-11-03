@@ -43,7 +43,6 @@
   <div class="field">
     <%= form.label :destination %>
     <%= form.select(:destination, (Job::Places::places).each_with_index.map {|x,i| [x, i]}) %>
-
   </div>
 
   <div class="field">

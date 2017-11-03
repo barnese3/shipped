@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171101182816) do
     t.string "name"
     t.integer "container_amount"
     t.string "location"
+    t.string "image"
     t.integer "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

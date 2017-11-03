@@ -16,14 +16,7 @@ class JobsController < ApplicationController
   def new
     @job = Job.new
     @job.company_id = current_company.id if company_signed_in?
-
-    @boats = current_company.boats if company_signed_in?
-    @selectboats = Array.new
-      @boats.each do |boat| 
-        @selectboats.push(boat.name)
-      end
-
-  end
+end
 
   # GET /jobs/1/edit
   def edit
@@ -77,8 +70,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-
-      params.require(:job).permit(:boat_ids, :company_id, :name, :description, :origin, :destination, :cost, :containers)
-
+    params.require(:job).permit(:boat_ids, :company_id, :name, :description, :origin, :destination, :cost, :containers)
     end
 end
