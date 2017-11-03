@@ -2,6 +2,7 @@ class Job < ApplicationRecord
 	has_many :boat_jobs, :dependent => :destroy
 	has_many :boats, :through => :boat_jobs, :dependent => :destroy
 	belongs_to :company
+	
 
 	validates :cost, numericality: {greater_than_or_equal_to: 1000}
 	validates :name, uniqueness: true

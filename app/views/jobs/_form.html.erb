@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+<div class="edit">
+<h1> Jobs</h1
+<center>
+
   <div class="field">
     <%= form.hidden_field :company_id %>
     <%= form.hidden_field :company_id, id: :company_id %>
@@ -53,5 +57,9 @@
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+    
+    <br>
+    <%= link_to 'Back', jobs_path %>
+ </center></div>
+
 <% end %>
