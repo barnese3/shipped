@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
 <div class="accountcontain">
 <div class="myaccount">
-<div class="company"><p id="notice"><%= notice %></p>
+<div class="company">
 
 <div class="companyHeadContain">
 <p class="companyHead">
@@ -41,10 +40,14 @@
 </div>
 </div>
 
-<p><%= link_to 'New Boat', new_boat_path %></p>
-<p><%= link_to 'New Job', new_job_path %></p>
+<% if company_signed_in? %>
+  <% if current_company.id == @company.id %>
+    <p><%= link_to 'New Boat', new_boat_path %></p>
+    <p><%= link_to 'New Job', new_job_path %></p>
 
-<p><%= link_to 'Edit My Account', edit_company_path(@company) %></p>
-<p><%= link_to 'Delete My Account', @company, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p><%= link_to 'Edit My Account', edit_company_path(@company) %></p>
+    <p><%= link_to 'Delete My Account', @company, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+<% end %>
 
 </div>

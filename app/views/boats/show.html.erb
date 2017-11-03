@@ -1,6 +1,6 @@
-<div class="boats"><p id="notice"><%= notice %></p>
+<div class="boats">
 
-<p>
+<p class="boatimageupload">
   <%= image_tag(@boat.image) if @boat.image? %>
 </p>
 
@@ -19,6 +19,11 @@
   <%= Boat::Places.get_location(@boat.location) %>
 </p>
 
-<%= link_to 'Edit Boat', edit_boat_path(@boat) %>
-<%= link_to 'Delete Boat', @boat, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if company_signed_in? %>
+  <% if current_company.id == @boat.company.id %>
+	<%= link_to 'Edit Boat', edit_boat_path(@boat) %>
+	<%= link_to 'Delete Boat', @boat, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+
 </div>

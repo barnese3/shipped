@@ -31,7 +31,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :boat_ids %>
+    <%= form.label :boat_ids, "Boat" %>
+    <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) %>
+  </div>
+
+  <p class="addboatbutton">Add Another Boat</p>
+
+  <div class="addboat">
+    <%= form.label :boat_ids, "Boat" %>
     <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) %>
   </div>
 
@@ -63,3 +70,9 @@
  </center></div>
 
 <% end %>
+
+<script>
+document.querySelector(".addboatbutton").addEventListener("click", function() {
+  document.querySelector(".addboat").style.display = "block";
+})
+</script>

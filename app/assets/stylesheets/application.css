@@ -16,7 +16,7 @@
 
 body{
 	background-color: #00A8E8;
-	color: #003459;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -31,7 +31,7 @@ body{
 .home a{
 	text-decoration: none;
 	margin: 20px;
-	color: #003459;
+	color: #ffffff;
 
 }
 
@@ -44,14 +44,14 @@ body{
 .nav ul li a{
 	text-decoration: none;
 	padding: 5px;
-	color: #003459;
+	color: #ffffff;
 
 }
 
 .company{
 	border: solid;
 	border-width: 50px;
-	text-align: left;
+	text-align: center;
 	padding-bottom: 10px;
 	padding: 15px;
 
@@ -65,7 +65,7 @@ body{
 
 .company a{
 	margin: 20px;
-	color: #003459;
+	color: #ffffff;
 }
 
 .job{
@@ -82,7 +82,7 @@ body{
 
 .job a{
 	margin: 20px;
-	color: #003459;
+	color: #ffffff;
 }
 
 .jobs{
@@ -106,7 +106,7 @@ body{
 
 .jobs a{
 	margin: 20px;
-	color: #003459;
+	color: #ffffff;
 }
 
 
@@ -116,7 +116,7 @@ body{
 	padding-bottom: 10px;
 	padding: 15px;
 	text-align: center;
-	color: #003459;
+	color: #ffffff;
 }
 
 .edit a{
@@ -131,7 +131,7 @@ body{
 	padding: 15px;
 }
 .boats a{
-	color: #003459;
+	color: #ffffff;
 }
 
 
@@ -142,7 +142,7 @@ body{
 	padding: 15px; 
 }
 .signup a{
-	color: #003459;
+	color: #ffffff;
 }
 
 .login{
@@ -153,7 +153,7 @@ body{
 }
 
 .login a{
-	color: #003459;
+	color: #ffffff;
 }
 
 
