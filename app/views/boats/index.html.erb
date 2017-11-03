@@ -17,7 +17,7 @@
       <tr>
         <td><%= link_to boat.name, boat %></td>
         <td><%= boat.container_amount %></td>
-        <td><%= boat.location %></td>
+        <td><%= Boat::Places.get_location(boat.location) %></td>
       </tr>
     <% end %>
   </tbody>

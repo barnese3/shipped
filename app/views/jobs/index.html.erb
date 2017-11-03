@@ -20,8 +20,8 @@
       <tr>
         <td><%= link_to job.name, job %></td>
         <td><%= job.description %></td>
-        <td><%= job.origin %></td>
-        <td><%= job.destination %></td>
+        <td><<%= Job::Places.get_location(job.origin) %></td>
+        <td><%= Job::Places.get_location(job.destination) %></td>
         <td><%= job.cost %></td>
         <td><%= job.containers %></td>
       </tr>
