@@ -10,8 +10,10 @@
 <br>
 
 <% if company_signed_in? %>
-	<%= link_to "My Account", current_company %>
-	<%= link_to('Logout', destroy_company_session_path, method: :delete) %>
+	<p><%= link_to "My Account", current_company %></p>
+	<p><%= link_to('Logout', destroy_company_session_path, method: :delete) %></p>
+	<p><%= link_to 'New Boat', new_boat_path %></p>
+    <p><%= link_to 'New Job', new_job_path %></p>
 <% end %>
 
 <br>

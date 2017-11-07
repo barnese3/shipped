@@ -30,25 +30,17 @@
   <%= @job.containers %>
 </p>
 
+<h3>Boat Assigned to this Job</h3>
+<% @job.boats.each do |boat| %>
+<p><%= boat.name %></p>
+<% end %>
+
 <p><%= @job.created_at.to_date %></p>
 
 <% if company_signed_in? %>
   <% if current_company.id == @job.company.id %>
     <%= link_to 'Edit Job', edit_job_path(@job) %> |
     <%= link_to 'Delete Job', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-<h3>Boats Assigned to this Job</h3>
-<% @job.boats.each do |boat| %>
-  <p><%= boat.name %></p>
-<% end %>
-
-<h3>Add Boat to This Job</h3>
- <% boats_array = Boat.all.map {|boat| [boat.name, boat.id]} %>
-          <%= form_for Boat.new, method: :patch, remote: true, class: "assign" do |f| %>
-          <td><%= select_tag(:boat_id, options_for_select(boats_array)) %></td>
-          <td>
-              <%= f.submit "Add Boat to Job" %>
-            <% end %>
   <% end %>
 <% end %>
 </div>

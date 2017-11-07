@@ -1,3 +1,4 @@
+<% if current_company %>
 <%= form_with(model: job, local: true) do |form| %>
   <% if job.errors.any? %>
     <div id="error_explanation">
@@ -32,14 +33,14 @@
 
   <div class="field">
     <%= form.label :boat_ids, "Boat" %>
-    <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) %>
+    <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) if current_company %>
   </div>
 
   <p class="addboatbutton">Add Another Boat</p>
 
   <div class="addboat">
     <%= form.label :boat_ids, "Boat" %>
-    <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) %>
+    <%= form.select( :boat_ids, options_for_select(current_company.boats.pluck(:name,:id))) if current_company %>
   </div>
 
   <div class="field">
@@ -69,6 +70,12 @@
     <%= link_to 'Back', jobs_path %>
  </center></div>
 
+<% end %>
+<% end %>
+
+<% if !current_company %>
+<h1>Log In to make a New Job</h1>
+<%= link_to "Log In", :new_company_session %>
 <% end %>
 
 <script>
