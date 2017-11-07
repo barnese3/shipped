@@ -15,11 +15,150 @@
  */
 
 body{
-	background-color: ;
+	background-color: #00A8E8;
+	color: #ffffff;
+	text-decoration: none;
 }
 
 
 .home{
 	padding: 10px;
-	text-decoration: ;
+	text-decoration: none;
+	text-align: center;
+	font-size: 15px;
 }
+
+.home a{
+	text-decoration: none;
+	margin: 20px;
+	color: #ffffff;
+
+}
+
+.nav ul{
+	list-style-type: none;
+	padding: 5px;
+	font-size: 12px;
+}
+
+.nav ul li a{
+	text-decoration: none;
+	padding: 5px;
+	color: #ffffff;
+
+}
+
+.company{
+	border: solid;
+	border-width: 50px;
+	text-align: center;
+	padding-bottom: 10px;
+	padding: 15px;
+
+}
+
+.company p{
+	padding: 5px;
+	padding-left:15px;
+	
+}
+
+.company a{
+	margin: 20px;
+	color: #ffffff;
+}
+
+.job{
+	border: solid;
+	border-width: 50px;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+.job p{
+	padding: 5px;
+	padding-left: 15px;
+}
+
+.job a{
+	margin: 20px;
+	color: #ffffff;
+}
+
+.jobs{
+	border: solid;
+	border-width: 50px;
+	text-align: left;
+	padding-bottom: 10px;
+	padding: 15px;
+
+}
+
+.jobs th{
+	padding-left: 10px;
+
+}
+
+.jobs td{
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.jobs a{
+	margin: 20px;
+	color: #ffffff;
+}
+
+
+.edit{
+	border: solid;
+	border-width: 50px;
+	padding-bottom: 10px;
+	padding: 15px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.edit a{
+	color: #003459;
+}
+
+.boats{
+	border: solid;
+	border-width: 50px;
+	text-align: left;
+	padding-bottom: 10px;
+	padding: 15px;
+}
+.boats a{
+	color: #ffffff;
+}
+
+
+.signup{
+	border: solid;
+	border-width: 50px;
+	padding-bottom: 10px;
+	padding: 15px; 
+}
+.signup a{
+	color: #ffffff;
+}
+
+.login{
+	border: solid;
+	border-width: 50px;
+	padding-bottom: 10px;
+	padding: 15px;
+}
+
+.login a{
+	color: #ffffff;
+}
+
+
+
+
+
+
+

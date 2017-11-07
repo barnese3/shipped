@@ -10,10 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+<div class="company"><center>
+<h1>Edit My Account</h1>
   <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username, id: :company_username %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :company_name %>
   </div>
 
   <div class="field">
@@ -38,5 +39,5 @@
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+  </div></div></center>
 <% end %>

@@ -10,7 +10,8 @@
       </ul>
     </div>
   <% end %>
-
+<div class="boats">
+<center><h1>Boats</h1>
   <div class="field">
     <%= form.hidden_field :company_id %>
     <%= form.hidden_field :company_id, id: :company_id %>
@@ -28,10 +29,17 @@
 
   <div class="field">
     <%= form.label :location %>
-    <%= form.select(:location, (Boat::LOCATIONS).each_with_index.map {|x,i| [x, i]}) %>
+    <%= form.select(:location, (Boat::Places::places).each_with_index.map {|x,i| [x, i]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+    <br>
+    <%= link_to 'Back', boats_path %>
+  </div></div></center>
 <% end %>

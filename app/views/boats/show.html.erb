@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="boats">
+
+<p class="boatimageupload">
+  <%= image_tag(@boat.image) if @boat.image? %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -12,8 +16,21 @@
 
 <p>
   <strong>Location:</strong>
-  <%= @boat.location %>
+  <%= Boat::Places.get_location(@boat.location) %>
 </p>
 
-<%= link_to 'Edit', edit_boat_path(@boat) %> |
-<%= link_to 'Back', boats_path %>
+<h2>Jobs Currently Assigned to this Boat</h2>
+  <% @boat.jobs.each do |job| %>
+    <li><%= job.name %></li>
+  <% end %>
+
+<p><em>edit boat to add jobs</em></p>
+
+<% if company_signed_in? %>
+  <% if current_company.id == @boat.company.id %>
+	<p><%= link_to 'Edit Boat', edit_boat_path(@boat) %></p>
+	<p><%= link_to 'Delete Boat', @boat, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+<% end %>
+
+</div>

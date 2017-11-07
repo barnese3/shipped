@@ -26,7 +26,6 @@ class BoatsController < ApplicationController
   # POST /boats.json
   def create
     @boat = Boat.new(boat_params)
-
     respond_to do |format|
       if @boat.save
         format.html { redirect_to @boat, notice: 'Boat was successfully created.' }
@@ -70,6 +69,6 @@ class BoatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boat_params
-      params.require(:boat).permit(:boat_id, :company_id, :name, :container_amount, :location)
+      params.require(:boat).permit(:job_ids, :boat_id, :company_id, :name, :container_amount, :location, :image)
     end
 end

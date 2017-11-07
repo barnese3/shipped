@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<div class="job">
 
 <p>
   <strong>Name:</strong>
@@ -12,12 +12,12 @@
 
 <p>
   <strong>Origin:</strong>
-  <%= @job.origin %>
+  <%= Job::Places.get_location(@job.origin) %>
 </p>
 
 <p>
   <strong>Destination:</strong>
-  <%= @job.destination %>
+  <%= Job::Places.get_location(@job.destination) %>
 </p>
 
 <p>
@@ -30,5 +30,17 @@
   <%= @job.containers %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<h3>Boat Assigned to this Job</h3>
+<% @job.boats.each do |boat| %>
+<p><%= boat.name %></p>
+<% end %>
+
+<p><%= @job.created_at.to_date %></p>
+
+<% if company_signed_in? %>
+  <% if current_company.id == @job.company.id %>
+    <%= link_to 'Edit Job', edit_job_path(@job) %> |
+    <%= link_to 'Delete Job', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+</div>

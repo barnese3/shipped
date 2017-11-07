@@ -1,6 +1,57 @@
-<h1>Editing Boat</h1>
+<%= form_with(model: @boat, local: true) do |form| %>
+  <% if @boat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(boat.errors.count, "error") %> prohibited this boat from being saved:</h2>
 
-<%= render 'form', boat: @boat %>
+      <ul>
+      <% boat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="boats">
+<center><h1>Boats</h1>
+  <div class="field">
+    <%= form.hidden_field :company_id %>
+    <%= form.hidden_field :company_id, id: :company_id %>
+  </div>
 
-<%= link_to 'Show', @boat %> |
-<%= link_to 'Back', boats_path %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :boat_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :container_amount %>
+    <%= form.number_field :container_amount, id: :boat_container_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.select(:location, (Boat::Places::places).each_with_index.map {|x,i| [x, i]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+<hr></hr>
+  <h2>Jobs Currently Assigned to this Boat</h2>
+  <% @boat.jobs.each do |job| %>
+  	<li><%= job.name %></li>
+  <% end %>
+
+  <h2>Add Job to this Boat</h2>
+    <div class="field">
+    <%= form.label :job_ids, "Job" %>
+    <%= form.select( :job_ids, options_for_select(current_company.jobs.pluck(:name,:id))) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+    <br>
+  </div>
+</div>
+</center>
+<% end %>

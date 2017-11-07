@@ -11,6 +11,20 @@
   <body>
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <nav class="nav">
+      <ul>
+        <li><%= link_to "Home", :root %></li>
+        <li><%= link_to "Companies", :companies %></li>
+        <li><%= link_to "Boats", :boats %></li>
+        <li><%= link_to "Jobs", :jobs %></li>
+        <% if company_signed_in? %>
+          <li><%= link_to "My Account", current_company %></li>
+          <li><%= link_to('Logout', destroy_company_session_path, method: :delete) %></li>
+          <li><%= link_to 'New Boat', new_boat_path %></li>
+          <li><%= link_to 'New Job', new_job_path %></li>
+        <% end %>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
